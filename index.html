@@ -10,7 +10,26 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body> 
-   
+    <div class="box">
+        <h1 class="title">To-do list</h1>
+        <form class="form">
+            <input class="input" type="text" name="work" placeholder="Add your new todo" required autocomplete="off">
+            <button class="submit" type="submit"><span class="fas fa-plus"></span></button>
+        </form>
+        <ul class="list">
+            <li class="task">
+               <p>Some Tasks</p>
+               <div class="action">
+                   <button class="done"><span class="fas fa-check"></span></button>
+                   <button class="remove"><i class="fas fa-trash-alt"></i></button>
+               </div>
+            </li>
+        </ul>
+        <footer class="footer" >
+            <p class="tasks-number">You have 0 tasks</p>
+            <button class="clear-all" >Clear All</button>
+        </footer>
+    </div>
     <script src="./js/main.js"></script>
 </body>
 </html>
