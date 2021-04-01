@@ -32,11 +32,16 @@ form.addEventListener('submit', e => {
     remove.addEventListener('click', () => {
         let selectingRemovableElement = remove.parentElement.parentElement;
         selectingRemovableElement.remove()
+        arr.forEach((value, index) =>{
+            if(value == selectingRemovableElement.children[0].textContent){
+                arr.splice(index, 1)
+                
+            }
+        })
+        count.textContent = arr.length
 
     })
     e.target.reset()
-
-
 })
 
 
