@@ -63,6 +63,14 @@ body {
     font-size: 2rem;
 } 
 
+.list{
+    display: block;
+    max-height: 30rem;
+    overflow-Y: auto;
+    margin: 1rem 0;
+    padding: 0.5rem;
+}
+
 .task{
     background-color: rgb(214, 214, 214);
     margin: 2rem 0;
@@ -74,11 +82,17 @@ body {
     align-items: center;
     
 }
+
 .task p{
     max-height: 100%;
     overflow-Y: auto;
     margin-left: 1.5rem;
+} 
+
+.line-through{
+    text-decoration-line: line-through;
 }
+
 .action{
     display: flex;
     height: 100%;
@@ -101,7 +115,6 @@ body {
 }
 
 .footer{
-     margin-top: 3rem;
      display: flex;
      justify-content: space-between;
      align-items: center;
