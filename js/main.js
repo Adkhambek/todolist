@@ -6,7 +6,7 @@ let clearAll = document.querySelector('.clear-all')
 let count = document.querySelector('.count')
 let arr = [];
 
-form.addEventListener('submit', e=>{
+form.addEventListener('submit', e => {
     e.preventDefault()
     let liElement = document.createElement('li')
     liElement.classList.add('task');
@@ -18,31 +18,42 @@ form.addEventListener('submit', e=>{
     arr.push(input.value)
     count.textContent = arr.length;
     list.prepend(liElement);
+
     let done = document.querySelector('.done')
     let remove = document.querySelector('.remove')
 
-    done.addEventListener('click', ()=>{
-        let selectingElment =  done.parentElement.parentElement;
-        selectingElment.classList.add('line-through')
+    done.addEventListener('click', () => {
+        let selectingElment = done.parentElement.parentElement;
+        selectingElment.children[0].classList.add('line-through')
         done.remove();
-      })
-
-    remove.addEventListener('click', ()=>{
-        let selectingElement =  done.parentElement.parentElement; 
-        
-        arr.forEach(value => {
-            if (selectingElement.textContent == value) {
-                console.log(value);
-            }
-        })
         
     })
-   e.target.reset()
-   
 
-}) 
+    remove.addEventListener('click', () => {
+        let selectingRemovableElement = remove.parentElement.parentElement;
+        selectingRemovableElement.remove()
+
+    })
+    e.target.reset()
 
 
+})
 
 
+// arr.forEach((value, index) => {
+//     if (selectingElement.textContent.trim() == value) {
+//         arr.splice(index, 1);
+//     }
+// })
 
+// for (let i = 0; i < arr.length; i++) {
+    
+//     liElement.innerHTML = `<p>${arr[i]}</p>
+//      <div class="action">
+//     <button class="done"><span class="fas fa-check"></span></button>
+//     <button class="remove"><i class="fas fa-trash-alt"></i></button>
+//      </div>`
+    
+// }
+// console.log(liElement);
+// // list.prepend(liElement);
