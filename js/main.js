@@ -29,6 +29,7 @@ form.addEventListener('submit', e=>{
 
     remove.addEventListener('click', ()=>{
         let selectingElement =  done.parentElement.parentElement; 
+        
         arr.forEach(value => {
             if (selectingElement.textContent == value) {
                 console.log(value);
