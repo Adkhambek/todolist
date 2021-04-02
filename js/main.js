@@ -42,6 +42,16 @@ form.addEventListener('submit', e => {
 
     })
     e.target.reset()
+}) 
+
+clearAll.addEventListener('click', ()=>{
+ let allLiElement = list.querySelectorAll(".task");
+ allLiElement.forEach(value => {
+    value.remove();
+    arr = [];
+    count.textContent = arr.length
+ })
+
 })
 
 
